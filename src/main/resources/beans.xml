@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--包扫描，只要标注了@Controller @Service @Repository @Component的都会被加入到ioc容器中-->
+<context:component-scan base-package="com.atguigu"></context:component-scan>
+    <!--注意包扫描还有一个默认规则，是扫描全部，即use-default-filters = true,我们设置只包含/只扫描的时候要禁用，设置为false-->
+<!--<context:component-scan base-package="com.atguigu" use-default-filters="false"></context:component-scan>-->
 
-    <bean id="person" class="com.atguigu.bean.Person">
+    <bean id="person" class="com.atguigu.bean.Person" scope="">
         <property name="age" value="18"></property>
         <property name="name" value="zhangsan"></property>
     </bean>

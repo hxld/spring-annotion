@@ -1,4 +1,4 @@
-package com.atguigu;
+package com.atguigu.test;
 
 import com.atguigu.bean.Person;
 import com.atguigu.config.MainConfig;
@@ -26,10 +26,11 @@ public class MainTest {
         System.out.println(bean);
 
 
-        String[] type = applicationContext.getBeanNamesForType(Person.class);
-        for (String name: type) {
-            System.out.println(name);
-            
-        }
+        //获取Person这个类型的组件在IOC容器中的名字
+       String[] type = applicationContext.getBeanNamesForType(Person.class);
+       for (String name: type) {
+           System.out.println(name);
+
+       }
     }
 }
