@@ -24,8 +24,9 @@ public class IocTest_Autowired {
 
         System.out.println(bookService);
 //
-//        BookDao bean = applicationContext.getBean(BookDao.class);
-//        System.out.println(bean);
+        BookDao bean = applicationContext.getBean(BookDao.class);
+        System.out.println(bean);
+
         Boss boss = applicationContext.getBean(Boss.class);
         System.out.println(boss);
 
@@ -36,6 +37,7 @@ public class IocTest_Autowired {
         Color color = applicationContext.getBean(Color.class);
         System.out.println(color);
 
+        System.out.println(applicationContext);
         applicationContext.close();
     }
 }

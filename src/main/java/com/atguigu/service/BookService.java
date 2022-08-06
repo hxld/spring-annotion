@@ -16,7 +16,7 @@ import javax.inject.Inject;
 public class BookService {
 
 //     @Qualifier(value="bookDao2")
-//     @Autowired(required = false)
+     @Autowired(required = false)
      //上面两个搭配一期使用
 //     @Resource
         @Inject

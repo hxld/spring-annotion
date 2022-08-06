@@ -18,5 +18,6 @@
     <bean id="person" class="com.atguigu.bean.Person" >
         <property name="age" value="18"></property>
         <property name="name" value="zhangsan"></property>
+        <property name="nickName" value="${person.nickName}"></property>
     </bean>
 </beans>

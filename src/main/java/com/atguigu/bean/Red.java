@@ -1,8 +1,36 @@
 package com.atguigu.bean;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.EmbeddedValueResolverAware;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringValueResolver;
+
 /**
  * @author hxld
  * @create 2022-08-04 23:38
  */
-public class Red {
+@Component
+public class Red implements ApplicationContextAware, BeanNameAware, EmbeddedValueResolverAware {
+
+
+    private ApplicationContext applicationContext;
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        System.out.println("传入的Ioc："+applicationContext);
+        this.applicationContext = applicationContext;
+    }
+
+    @Override
+    public void setBeanName(String s) {
+        System.out.println("当前bean的名字："+ s);
+    }
+
+    @Override
+    public void setEmbeddedValueResolver(StringValueResolver resolver) {
+        String resolveStringValue = resolver.resolveStringValue("你好 ${os.name} #{20*18}");
+        System.out.println("解析的字符串"+resolveStringValue);
+    }
 }
