@@ -2,10 +2,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
-                           https://www.springframework.org/schema/context/spring-context.xsd">
+                           https://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/aop
+                            https://www.springframework.org/schema/aop/spring-aop.xsd"
+
+>
 
     <!--包扫描，只要标注了@Controller @Service @Repository @Component的都会被加入到ioc容器中-->
 <context:component-scan base-package="com.atguigu"></context:component-scan>
@@ -20,4 +25,9 @@
         <property name="name" value="zhangsan"></property>
         <property name="nickName" value="${person.nickName}"></property>
     </bean>
+
+    <!--引入aop命名空间，开启基于注解版的切面功能-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+
 </beans>
