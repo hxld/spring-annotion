@@ -49,6 +49,14 @@
             <artifactId>spring-aspects</artifactId>
             <version>5.3.21</version>
         </dependency>
+
+
+        <!--spring-jdbc来简化数据库操作以及事务控制-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.21</version>
+        </dependency>
     </dependencies>
 
     <properties>
