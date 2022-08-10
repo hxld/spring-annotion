@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/spring-annotation/src/main/java/com/atguigu/tx/TxConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-annotion01/src/spring-annotation/src/main/java/com/atguigu/tx/TxConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/SpringSource.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/spring-annotation/src/main/java/com/atguigu/tx/TxConfig.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../../video/尚硅谷java/尚硅谷全套JAVA教程--选学技术丰富（36.82GB）/尚硅谷Spring注解驱动开发/Spring注解驱动开发/课件/课件/代码/spring-annotation/src/main/java/com/atguigu/tx/TxConfig.java" charset="GBK" />
   </component>
 </project>
